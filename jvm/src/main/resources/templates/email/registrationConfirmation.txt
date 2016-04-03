@@ -1,0 +1,4 @@
+SoftwareMill Akkaangular - registration confirmation for user {{userName}}
+Dear {{userName}},
+
+Thank you for registering in our application.
