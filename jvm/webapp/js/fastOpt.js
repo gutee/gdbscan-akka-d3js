@@ -15194,7 +15194,9 @@ $c_sr_ScalaRunTime$$anon$1.prototype.$classData = $d_sr_ScalaRunTime$$anon$1;
 /** @constructor */
 function $c_Lcom_simple_controller_D3Controller() {
   $c_Lcom_greencatsoft_angularjs_AbstractController.call(this);
-  this.optionsText$2 = null
+  this.optionsText$2 = null;
+  this.optionsText2$2 = null;
+  this.dataText$2 = null
 }
 $c_Lcom_simple_controller_D3Controller.prototype = new $h_Lcom_greencatsoft_angularjs_AbstractController();
 $c_Lcom_simple_controller_D3Controller.prototype.constructor = $c_Lcom_simple_controller_D3Controller;
@@ -15235,8 +15237,10 @@ $c_Lcom_simple_controller_D3Controller.prototype.$$js$exported$meth$submit__O = 
 });
 $c_Lcom_simple_controller_D3Controller.prototype.init___Lcom_simple_controller_D3Scope = (function(scope) {
   $c_Lcom_greencatsoft_angularjs_AbstractController.prototype.init___Lcom_greencatsoft_angularjs_core_Scope.call(this, scope);
-  this.optionsText$2 = "\n{\n    \"chart\": {\n        \"type\": \"scatterChart\", \n        \"height\": 900, \n        \"width\": 900, \n        \"margin\": {\n            \"top\": 20, \n            \"right\": 20, \n            \"bottom\": 60, \n            \"left\": 55\n        }, \n        \"showValues\": true, \n        \"transitionDuration\": 350, \n        \"xAxis\": {\n            \"axisLabel\": \"X Axis\"\n        }, \n        \"yAxis\": {\n            \"axisLabel\": \"Y Axis\"\n        },\n        \n    \"title\": {\n        \"enable\": true,\n        \"text\": \"GDBSCAN DIGRAM\"\n    }\n            \n    }\n}\n        ";
-  this.scope$1.ref = $g.JSON.parse(this.optionsText$2);
+  this.optionsText$2 = "\n{\n    \"chart\": {\n        \"type\": \"scatterChart\", \n        \"height\": 900, \n        \"width\": 900, \n        \"margin\": {\n            \"top\": 20, \n            \"right\": 20, \n            \"bottom\": 60, \n            \"left\": 55\n        }, \n        \"showValues\": true, \n        \"transitionDuration\": 350, \n        \"xAxis\": {\n            \"axisLabel\": \"X Axis\"\n        }, \n        \"yAxis\": {\n            \"axisLabel\": \"Y Axis\"\n        },\n        \n        \"title\": {\n            \"enable\": true,\n            \"text\": \"GDBSCAN DIGRAM\"\n        }       \n    }\n}\n        ";
+  this.optionsText2$2 = "\n{\n    \"chart\": {\n        \"type\": \"scatterChart\",\n        \"height\": 900,\n        \"width\": 900,\n        \"scatter\": {\n          \"onlyCircles\": false\n        },\n        \"showDistX\": true,\n        \"showDistY\": true,\n        \"duration\": 350,\n        \"xAxis\": {\n          \"axisLabel\": \"X Axis\"\n        },\n        \"yAxis\": {\n          \"axisLabel\": \"Y Axis\",\n          \"axisLabelDistance\": -5\n        },\n        \"zoom\": {\n          \"enabled\": true,\n          \"scaleExtent\": [\n            1,\n            10\n          ],\n          \"useFixedDomain\": false,\n          \"useNiceScale\": false,\n          \"horizontalOff\": false,\n          \"verticalOff\": false,\n          \"unzoomEventType\": \"dblclick.zoom\"\n        }\n    },\n    \"title\": {\n        \"enable\": true,\n        \"text\": \"Title for Line Chart\"\n    },\n    \"subtitle\": {\n        \"enable\": true,\n        \"text\": \"Subtitle for simple line chart. Lorem ipsum dolor sit amet...\",\n        \"css\": {\n            \"text-align\": \"center\",\n            \"margin\": \"10px 13px 0px 7px\"\n        }\n    },\n    \"caption\": {\n        \"enable\": true,\n        \"html\": \"Figure 1. Lorem ipsum dolor sit amet...\",\n        \"css\": {\n            \"text-align\": \"justify\",\n            \"margin\": \"10px 13px 0px 7px\"\n        }\n    }\n} \n    \n    ";
+  this.dataText$2 = "\n[\n    {\n        \"key\": \"Group 0\", \n        \"values\": [\n            {\n                \"x\": 0.10330622161870882, \n                \"y\": 0.20793365176444703, \n                \"size\": 0.21713723632390303, \n                \"shape\": \"circle\"\n            }, \n            {\n                \"x\": -1.0515291118697523, \n                \"y\": 0.5268680632861393, \n                \"size\": 0.15527655327486833, \n                \"shape\": \"circle\"\n            }\n\n        ]\n    }, \n    {\n        \"key\": \"Group 1\", \n        \"values\": [\n            {\n                \"x\": 0.879273868254847, \n                \"y\": -0.22946412397382013, \n                \"size\": 0.7037522513596903, \n                \"shape\": \"circle\"\n            }, \n            {\n                \"x\": -0.9436832130706864, \n                \"y\": 0.5691370697657997, \n                \"size\": 0.4912816430899889, \n                \"shape\": \"circle\"\n            }, \n            {\n                \"x\": -0.7109594820239431, \n                \"y\": -1.3585336319861274, \n                \"size\": 0.16759546555180815, \n                \"shape\": \"circle\"\n            } \n        ]\n    }, \n    {\n        \"key\": \"Group 2\", \n        \"values\": [\n            {\n                \"x\": -0.639723023171846, \n                \"y\": 0.3938662438748171, \n                \"size\": 0.18809809076337558, \n                \"shape\": \"circle\"\n            }, \n            {\n                \"x\": -0.17864217164349058, \n                \"y\": -0.9361676411737182, \n                \"size\": 0.6606834389779213, \n                \"shape\": \"circle\"\n            }\n        ]\n    }, \n    {\n        \"key\": \"Group 3\", \n        \"values\": [\n            {\n                \"x\": 0.2863606664498774, \n                \"y\": -0.5258771670134756, \n                \"size\": 0.2464482337597793, \n                \"shape\": \"circle\"\n            }, \n            {\n                \"x\": 0.4070678013559303, \n                \"y\": -0.7892207116233403, \n                \"size\": 0.45762126195592434, \n                \"shape\": \"circle\"\n            }, \n            {\n                \"x\": 0.0464110421771623, \n                \"y\": -1.434419234761621, \n                \"size\": 0.3471898734529575, \n                \"shape\": \"circle\"\n            }\n        ]\n    }\n]    \n    ";
+  this.scope$1.ref = $g.JSON.parse(this.optionsText2$2);
   var this$3 = $m_Lorg_scalajs_dom_ext_Ajax$();
   var headers = $m_sci_Map$EmptyMap$();
   var this$4 = this$3.apply__T__T__Lorg_scalajs_dom_ext_Ajax$InputData__I__sci_Map__Z__T__s_concurrent_Future("GET", "api/gdbscan/getClusters", null, 0, headers, false, "");
@@ -15380,21 +15384,21 @@ $c_Lcom_simple_controller_D3Controller$$anonfun$dealResult$1.prototype.applyOrEl
   }));
   var this$5 = $m_sc_Seq$();
   var allRes = $as_sci_IndexedSeq(jsx$3.$$colon$plus__O__scg_CanBuildFrom__O(new $c_Lcom_simple_controller_Group().init___T__sc_Seq(("group:" + ((1 + jsx$2) | 0)), $as_sc_Seq(noises.map__F1__scg_CanBuildFrom__O(jsx$1, this$5.ReusableCBFInstance$2))), ($m_sci_IndexedSeq$(), $m_sc_IndexedSeq$().ReusableCBF$6)));
-  var this$7 = this.$$outer$2;
-  var jsx$6 = this$7.scope$1;
-  var jsx$5 = $g.JSON;
-  var this$12 = $m_Lupickle_default$();
+  var jsx$4 = $g.JSON;
+  var this$11 = $m_Lupickle_default$();
   $m_Lupickle_default$();
   var indent = 0;
-  var this$10 = $m_Lupickle_default$();
+  var this$9 = $m_Lupickle_default$();
   var v = $m_s_Predef$().singleton$und$less$colon$less$2;
-  var this$9 = new $c_Lcom_simple_controller_D3Controller$$anonfun$dealResult$1$$anon$3().init___Lcom_simple_controller_D3Controller$$anonfun$dealResult$1(this);
-  var w = this$9.derive$macro$19__Lupickle_Types$Writer();
-  var this$11 = this$10.Aliases__Lupickle_Types$Aliases$().W$1;
-  var _write = new $c_Lupickle_Implicits$$anonfun$SeqishW$1().init___Lupickle_Implicits__s_Predef$$less$colon$less__Lupickle_Types$Writer(this$10, v, w);
-  var evidence$1 = new $c_Lupickle_Types$Writer$$anon$2().init___Lupickle_Types$Writer$__F1(this$11, _write);
-  var jsx$4 = jsx$5.parse($s_Lupickle_Types$class__write__Lupickle_Types__O__I__Lupickle_Types$Writer__T(this$12, allRes, indent, evidence$1));
-  jsx$6.content = jsx$4
+  var this$8 = new $c_Lcom_simple_controller_D3Controller$$anonfun$dealResult$1$$anon$3().init___Lcom_simple_controller_D3Controller$$anonfun$dealResult$1(this);
+  var w = this$8.derive$macro$19__Lupickle_Types$Writer();
+  var this$10 = this$9.Aliases__Lupickle_Types$Aliases$().W$1;
+  var _write = new $c_Lupickle_Implicits$$anonfun$SeqishW$1().init___Lupickle_Implicits__s_Predef$$less$colon$less__Lupickle_Types$Writer(this$9, v, w);
+  var evidence$1 = new $c_Lupickle_Types$Writer$$anon$2().init___Lupickle_Types$Writer$__F1(this$10, _write);
+  var content = jsx$4.parse($s_Lupickle_Types$class__write__Lupickle_Types__O__I__Lupickle_Types$Writer__T(this$11, allRes, indent, evidence$1));
+  var this$12 = this.$$outer$2;
+  var jsx$5 = this$12.scope$1.myapi;
+  return jsx$5.updateWithData(content)
 });
 $c_Lcom_simple_controller_D3Controller$$anonfun$dealResult$1.prototype.init___Lcom_simple_controller_D3Controller__sc_Seq__sci_IndexedSeq = (function($$outer, clusters$1, comboRes$1) {
   if (($$outer === null)) {

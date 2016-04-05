@@ -1,6 +1,6 @@
 <classpath>
   <classpathentry kind="src" path="src/main/scala"/>
-  <classpathentry output="-home-aaron-project-crossbuilding-for-eclipse-shared-src-main-scala" kind="src" path="-home-aaron-project-crossbuilding-for-eclipse-shared-src-main-scala"/>
+  <classpathentry output="-home-aaron-project-gdbscan-akka-d3js-shared-src-main-scala" kind="src" path="-home-aaron-project-gdbscan-akka-d3js-shared-src-main-scala"/>
   <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/org.webjars.bower/d3/jars/d3-3.5.16.jar"/>
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/org.webjars.bower/nvd3/jars/nvd3-1.8.2.jar"/>
@@ -13,6 +13,7 @@
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/com.typesafe.scala-logging/scala-logging_2.11/jars/scala-logging_2.11-3.1.0.jar"/>
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/com.lihaoyi/upickle_sjs0.6_2.11/jars/upickle_sjs0.6_2.11-0.3.9.jar"/>
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/com.lihaoyi/derive_sjs0.6_2.11/jars/derive_sjs0.6_2.11-0.3.9.jar"/>
+  <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/com.lihaoyi/autowire_sjs0.6_2.11/jars/autowire_sjs0.6_2.11-0.2.5.jar"/>
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/be.doeraene/scalajs-jquery_sjs0.6_2.11/jars/scalajs-jquery_sjs0.6_2.11-0.9.0.jar"/>
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/org.scala-js/scalajs-dom_sjs0.6_2.11/jars/scalajs-dom_sjs0.6_2.11-0.9.0.jar"/>
   <classpathentry kind="lib" path="/home/aaron/.ivy2/cache/com.greencatsoft/scalajs-angular_sjs0.6_2.11/jars/scalajs-angular_sjs0.6_2.11-0.6.jar"/>

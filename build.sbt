@@ -5,7 +5,7 @@ import sbt._
 import Keys._
 
 import scala.util.Try
-//import scalariform.formatter.preferences._
+//import scalariform.formatter.preferences.um_
 
 val slf4jVersion = "1.7.19"
 val logBackVersion = "1.1.6"
@@ -47,7 +47,6 @@ val seleniumStack = Seq(seleniumJava, seleniumFirefox)
 val akkaStack = Seq(
 "com.typesafe.akka" %% "akka-http-core" % akkaVersion, 
 "com.typesafe.akka" %% "akka-http-experimental" % akkaVersion,
-"com.typesafe.akka" %% "akka-http-spray-json-experimental" % akkaVersion,
 "com.typesafe.akka" %% "akka-http-testkit" % akkaVersion % "test", 
 "com.softwaremill.akka-http-session" %% "core" % "0.2.4"
 )
@@ -89,7 +88,7 @@ lazy val app = crossProject.in(file("."))
 	"org.webjars.bower" % "angular" % "1.5.1" / "angular.js",
 	"org.webjars.bower" % "d3" % "3.5.16" / "d3.js",
 	"org.webjars.bower" % "nvd3" % "1.8.2" / "nv.d3.js" dependsOn "d3.js",
-	"org.webjars.bower" % "angular-nvd3" % "1.0.5" / "angular-nvd3.js" dependsOn "angular.js" 
+	"org.webjars.bower" % "angular-nvd3" % "1.0.5" / "angular-nvd3.js" dependsOn "angular.js"
 	),
 
 	//jsDependencies += RuntimeDOM
