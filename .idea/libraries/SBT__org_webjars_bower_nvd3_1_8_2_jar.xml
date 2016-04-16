@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.webjars.bower:nvd3:1.8.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.webjars.bower/nvd3/jars/nvd3-1.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.webjars.bower/nvd3/srcs/nvd3-1.8.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,27 +1,13 @@
 package com.afei.akkaangular.gdbscan
 
+import akka.http.scaladsl.marshalling.ToResponseMarshallable.apply
+import akka.http.scaladsl.server.Directive.{addByNameNullaryApply, addDirectiveApply}
+import akka.http.scaladsl.server.Directives._
 import com.afei.akkaangular.api.RoutesSupport
-import com.afei.model.Location
-import com.afei.model.Param
+import com.afei.model.{Location, Param}
 import com.simple.rest.DataService
 import com.typesafe.scalalogging.StrictLogging
-
-import akka.http.scaladsl.marshalling.ToResponseMarshallable.apply
-import akka.http.scaladsl.server.Directive.addByNameNullaryApply
-import akka.http.scaladsl.server.Directive.addDirectiveApply
-import akka.http.scaladsl.server.Directives.as
-import akka.http.scaladsl.server.Directives.complete
-import akka.http.scaladsl.server.Directives.enhanceRouteWithConcatenation
-import akka.http.scaladsl.server.Directives.entity
-import akka.http.scaladsl.server.Directives.get
-import akka.http.scaladsl.server.Directives.path
-import akka.http.scaladsl.server.Directives.pathPrefix
-import akka.http.scaladsl.server.Directives.post
-import akka.http.scaladsl.server.Directives.segmentStringToPathMatcher
-import upickle.default.SeqishW
-import upickle.default.macroR
-import upickle.default.read
-import upickle.default.write
+import upickle.default.{macroR, read, write}
 
 trait DbscanRoutes extends RoutesSupport with StrictLogging {
 

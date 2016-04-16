@@ -31,13 +31,15 @@ trait D3Scope extends Scope {
 }
 
 case class ElementData(x: Double, y: Double, size: Double, shape: String)
+
 case class Group(key: String, values: Seq[ElementData])
 
 @JSExport
 @injectable("d3Ctrl")
 class D3Controller(scope: D3Scope) extends AbstractController[D3Scope](scope) {
 
-  val optionsText = """
+  val optionsText =
+    """
 {
     "chart": {
         "type": "scatterChart", 
@@ -57,17 +59,18 @@ class D3Controller(scope: D3Scope) extends AbstractController[D3Scope](scope) {
         "yAxis": {
             "axisLabel": "Y Axis"
         },
-        
+
         "title": {
             "enable": true,
             "text": "GDBSCAN DIGRAM"
         }       
     }
 }
-        """
-// zoom not work yet because of a bug in angular-nvd3
-// https://github.com/krispo/angular-nvd3/issues/296
-  val optionsText2 = """
+    """
+  // zoom not work yet because of a bug in angular-nvd3
+  // https://github.com/krispo/angular-nvd3/issues/296
+  val optionsText2 =
+    """
 {
     "chart": {
         "type": "scatterChart",
@@ -120,11 +123,12 @@ class D3Controller(scope: D3Scope) extends AbstractController[D3Scope](scope) {
         }
     }
 } 
-    
-    """
-  
 
-  val dataText = """
+    """
+
+
+  val dataText =
+    """
 [
     {
         "key": "Group 0", 
@@ -208,8 +212,8 @@ class D3Controller(scope: D3Scope) extends AbstractController[D3Scope](scope) {
         ]
     }
 ]    
-    """  
-//  scope.content = JSON.parse(dataText)
+    """
+  //  scope.content = JSON.parse(dataText)
   scope.ref = JSON.parse(optionsText2)
 
   Ajax.get("api/gdbscan/getClusters")

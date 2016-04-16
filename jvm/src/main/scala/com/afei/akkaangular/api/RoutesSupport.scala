@@ -8,17 +8,13 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.{ AuthorizationFailedRejection, Directive1 }
 import akka.http.scaladsl.unmarshalling.{ FromEntityUnmarshaller, Unmarshaller }
 import akka.stream.Materializer
-import com.afei.akkaangular.user.{ BasicUserData, Session, UserId, UserService }
-import com.softwaremill.session.SessionDirectives._
-import com.softwaremill.session.{ RefreshTokenStorage, SessionManager }
+
 import cats.data.Xor
 import io.circe._
 import io.circe.jawn.decode
-import com.softwaremill.session.SessionOptions._
 
-import scala.concurrent.ExecutionContext
 
-trait RoutesSupport extends JsonSupport with SessionSupport {
+trait RoutesSupport extends JsonSupport {
   def completeOk = complete("ok")
 }
 
@@ -44,10 +40,10 @@ trait JsonSupport extends CirceEncoders {
   }
 
   /**
-   * To limit what data can be serialized to the client, only classes of type `T` for which an implicit
-   * `CanBeSerialized[T]` value is in scope will be allowed. You only need to provide an implicit for the base value,
-   * any containers like `List` or `Option` will be automatically supported.
-   */
+    * To limit what data can be serialized to the client, only classes of type `T` for which an implicit
+    * `CanBeSerialized[T]` value is in scope will be allowed. You only need to provide an implicit for the base value,
+    * any containers like `List` or `Option` will be automatically supported.
+    */
   trait CanBeSerialized[T]
   object CanBeSerialized {
     def apply[T] = new CanBeSerialized[T] {}
@@ -57,28 +53,6 @@ trait JsonSupport extends CirceEncoders {
   }
 }
 
-trait SessionSupport {
-
-  implicit def sessionManager: SessionManager[Session]
-  implicit def refreshTokenStorage: RefreshTokenStorage[Session]
-  implicit def ec: ExecutionContext
-
-  def userService: UserService
-
-  def userFromSession: Directive1[BasicUserData] = userIdFromSession.flatMap { userId =>
-    onSuccess(userService.findById(userId)).flatMap {
-      case None => reject(AuthorizationFailedRejection)
-      case Some(user) => provide(user)
-    }
-  }
-
-  def userIdFromSession: Directive1[UserId] = session(refreshable, usingCookies).flatMap {
-    _.toOption match {
-      case None => reject(AuthorizationFailedRejection)
-      case Some(s) => provide(s.userId)
-    }
-  }
-}
 
 trait CacheSupport {
   import akka.http.scaladsl.model.DateTime

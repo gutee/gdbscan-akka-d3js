@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appJS.iml" filepath="$PROJECT_DIR$/.idea/modules/appJS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appJS-build.iml" filepath="$PROJECT_DIR$/.idea/modules/appJS-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appJVM.iml" filepath="$PROJECT_DIR$/.idea/modules/appJVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appJVM-build.iml" filepath="$PROJECT_DIR$/.idea/modules/appJVM-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gdbscan-akka-d3js.iml" filepath="$PROJECT_DIR$/.idea/modules/gdbscan-akka-d3js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gdbscan-akka-d3js-build.iml" filepath="$PROJECT_DIR$/.idea/modules/gdbscan-akka-d3js-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gdbscan-akka-d3js-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/gdbscan-akka-d3js-sources.iml" />
+    </modules>
+  </component>
+</project>

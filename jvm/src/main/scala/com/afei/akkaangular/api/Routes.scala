@@ -2,16 +2,10 @@ package com.afei.akkaangular.api
 
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.server.{ RejectionHandler, Route, ExceptionHandler }
-import com.afei.akkaangular.passwordreset.PasswordResetRoutes
-import com.afei.akkaangular.user.UsersRoutes
+import akka.http.scaladsl.server.{ExceptionHandler, RejectionHandler}
 import com.afei.akkaangular.gdbscan.DbscanRoutes
 
-trait Routes extends UsersRoutes
-    with PasswordResetRoutes
-//    with VersionRoutes
-    with CacheSupport
-    with DbscanRoutes{
+trait Routes extends CacheSupport with DbscanRoutes{
 
   private val exceptionHandler = ExceptionHandler {
     case e: Exception =>
@@ -36,9 +30,6 @@ trait Routes extends UsersRoutes
         cacheImages {
           encodeResponse {
             pathPrefix("api") {
-              passwordResetRoutes ~
-                usersRoutes ~
-//                versionRoutes ~
                 gdbscanRoute
             } ~
               getFromDirectory("webapp") ~

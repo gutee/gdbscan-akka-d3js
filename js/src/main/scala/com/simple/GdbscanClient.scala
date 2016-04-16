@@ -1,10 +1,9 @@
 package com.simple
 
-import scala.scalajs.js.JSApp
-
 import com.greencatsoft.angularjs.Angular
-import com.greencatsoft.angularjs.injectable
 import com.simple.controller.D3Controller
+
+import scala.scalajs.js.JSApp
 
 object GdbscanClient extends JSApp {
   def main(): Unit = {
